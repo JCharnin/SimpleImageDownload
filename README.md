@@ -7,6 +7,10 @@ This script is designed for macOS systems and utilizes osascript for GUI interac
 This script is intended for macOS only.
 Users need to grant permission for the script to access the file browser when prompted.
 
+## Ethical Considerations
+
+It's imperative to use SimpleImageDownload4MacOS ethically. Ensure you have the necessary permissions to download and use images from the web. Unauthorized use could lead to copyright infringement issues.
+
 ## Usage
 
 Ensure the script is executable by running:
