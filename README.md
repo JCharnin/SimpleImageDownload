@@ -1,20 +1,33 @@
-# Image Downloader Script
+# Image Downloader Script (Mac Only)
 
-This bash script is designed to download images from a list of URLs provided in a text file. It allows you to specify a title at the top of the text file, which is used to create a folder for storing the downloaded images. Each image is renamed with a combination of the title, the original file name, and the current date.
+This script is designed for macOS systems and utilizes osascript for GUI interactions. It allows users to download and rename images from either a text file containing image URLs or directly from a webpage URL.
+
+## Requirements
+
+This script is intended for macOS only.
+Users need to grant permission for the script to access the file browser when prompted.
 
 ## Usage
 
-1. Create a text file containing a title on the first line followed by a list of image URLs.
-2. Make sure each URL is on a separate line.
-3. Run the script with the path to the text file as an argument.
+Ensure the script is executable by running:
 
-Example in bash:
+1. Opening a terminal (bash)
+2. Copy code and execute this code:
+    *chmod +x download_images.sh*
+3. Copy code and execute this code:
+    *./download_images.sh*
 
-./download_images.sh image_urls.txt
+## Usage - Menu Options
+
+**Load images from a text file:** Prompts the user to select a text file containing image URLs. It then asks for a folder name to save the downloaded images.
+
+**Provide a single page URL:** Prompts the user to enter a webpage URL. It also requests a folder name to save the downloaded images.
+
+**Exit:** Terminates the script.
 
 ## File Naming Convention
 
-Images are saved in a folder named after the title provided in the text file. The file names are constructed as follows:
+Images are saved in a folder named after the title provided in the text file. The file names are constructed with the format: [original_filename]-[timestamp]-[image_number].[extension].
 
 ## Skipping URLs
 
@@ -22,16 +35,11 @@ The script skips URLs containing certain blacklisted keywords, such as "facebook
 
 ## Spellcheck
 
-The script does not include a spellcheck feature.
+This script does not include a spellcheck feature.
 
 ## Maintaining Skip List
 
-To maintain the list of skipped keywords, edit the `skip_list` array in the script.
-
-## Requirements
-
-- Bash shell
-- curl command-line tool
+To maintain the list of skipped keywords, edit the skip_list array in the script.
 
 ## License
 
